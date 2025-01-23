@@ -3,6 +3,8 @@ def get(): return """
 <!DOCTYPE html>
 <html>
 <head>
+<title>Sign Up</title>
+</head>
 <style>
 
 div.dialog {
@@ -47,7 +49,7 @@ div.button {
     border: 3px outset;
     margin: 1em;
     padding: 1em;
-    background: lightgrey;
+    background: #66a9c0;
     text-align: center;
 }
 
