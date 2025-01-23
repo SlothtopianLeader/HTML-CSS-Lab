@@ -58,12 +58,13 @@ div.button {
     <div class="title">Sign up</div>
     <hr>
     <div>Email</div>
-    <input size=30>
+    <input size=10>
     <div>Real Name</div>
-    <input size=30>
+    <input size=10>
     <div>Password</div>
-    <input size=30>
+    <input type=”password” size=10>
     <div>Date of Birth</div>
+    <input type=”date”>
     <div class="button">Sign Up</button>
 </div>
      
