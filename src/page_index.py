@@ -8,7 +8,7 @@ def get(): return """
 
 .titlebar {
     background: #5a6c97;
-    border: 1px solid white;
+    border: 1px solid black;
 }
 
 
@@ -19,8 +19,10 @@ def get(): return """
 <body>
 
 <div class='titlebar' align="right">
+<font color="white">
     Hello,
     NAME
+</font>
 </div>
 
 </body>
