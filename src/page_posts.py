@@ -97,54 +97,81 @@ img{
     <div class="entry" style="background: #ddeeee">
     <div>
     <img src="/html/Stitch.png" width="64" height="64">
+    "Can't wait for the live action 'Lilo and Stitch'!!!"
+    1 day ago
+    Views: 25
     </div>
     </div>
     
     <div class="entry" style="background: #deeef0">
     <div>
     <img src="/html/Stitch.png" width="64" height="64">
+    "Just took a BuzzFeed quiz, I got Stitch!! :D"
+    2 days ago
+    Views: 32
     </div>
     </div>
     
     <div class="entry" style="background: #cde5e5">
     <div>
     <img src="/html/Stitch.png" width="64" height="64">
+    "What is the best place to visit in Hawaii?"
+    4 days ago
+    Views: 29
     </div>
     </div>
     
     <div class="entry" style="background: #bcdcdc">
     <div>
     <img src="/html/Stitch.png" width="64" height="64">
+    "Any Lilo and Stitch fans here??"
+    9 days ago
+    Views: 43
     </div>
     </div>
     
     <div class="entry" style="background: #abd4d4">
     <div>
     <img src="/html/Stitch.png" width="64" height="64">
+    "Any one have any ideas for hobbies? Trying to find something new to do."
+    10 days ago
+    Views: 62
     </div>
     </div>
     
     <div class="entry" style="background: #9acbcb">
     <div>
     <img src="/html/Stitch.png" width="64" height="64">
+    "I can't wait for spring, I'm ready to say goodbye to this snow!"
+    12 days ago
+    Views: 71
     </div>
     </div>
     
     <div class="entry" style="background: #89c2c2">
     <div>
     <img src="/html/Stitch.png" width="64" height="64">
+    "I thought about learning how to surf, not sure how I can do that at the moment... #landlockedlife"
+    12 days ago
+    Views: 56
     </div>
     </div>
     
     <div class="entry" style="background: #78baba">
     <div>
     <img src="/html/Stitch.png" width="64" height="64">
+    "Hello!"
+    15 days ago
+    Views: 15
     </div>
     </div>
     
     <div class="entry" style="background: #68b1b1">
     <div>
     <img src="/html/Stitch.png" width="64" height="64">
+    "Welcome StitchFan73"
+    15 days ago
+    Views: 15
     </div>
     </div>
 </div>
