@@ -1,5 +1,6 @@
 import cherrypy
 import os.path
+import random
 
 #we have modules for each page we're displaying 
 import page_index
@@ -10,6 +11,7 @@ import page_test
 class App:
     @cherrypy.expose
     def index(self):
+        n = random.choice(names.names)
         return page_index.get()
     @cherrypy.expose
     def signup(self):

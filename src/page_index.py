@@ -21,7 +21,7 @@ def get(): return """
 <div class='titlebar' align="right">
 <font color="white">
     Hello,
-    NAME
+    ${index}
 </font>
 </div>
 
