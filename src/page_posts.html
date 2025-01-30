@@ -4,7 +4,6 @@
 <title>Posts</title>
 </head>
 <style>
-
 div.box {
     
     border: 2px double black;
@@ -13,7 +12,6 @@ div.box {
     padding-left: 1em;
     padding-right: 1em;
     padding-bottom: 1em;
-
     /* center the div vertically and horizontally
        ref: https://stackoverflow.com/a/13356401 */
     position: absolute;
@@ -22,19 +20,14 @@ div.box {
     left: 0;
     right: 0;
     margin: auto;
-
     /* set size of dialog */
     width: 40vw;
     height: 40vh;
-
     overflow: auto;
-
     /* offset x, offset y, blur radius, color*/
     box-shadow: 1em 1em 0.5em rgba(0,0,0,0.5);
-
     z-index: 10;
 }
-
 div.entry {
     
     border: 1px double black;
@@ -43,7 +36,6 @@ div.entry {
     padding-left: 1em;
     padding-right: 1em;
     padding-bottom: 0em;
-
     /* center the div vertically and horizontally
        ref: https://stackoverflow.com/a/13356401 */
     position: relative;
@@ -52,16 +44,12 @@ div.entry {
     left: 0;
     right: 0;
     margin: auto;
-
     /* set size of dialog */
     width: 40vw;
     height: 10vh;
-
     overflow: auto;
-
     z-index: 10;
 }
-
 .title {
     font-weight: bold;
     text-align: center;
@@ -75,20 +63,18 @@ img{
 }
 </style>
 <body>
-
 <div class='titlebar' align="center">
 <font color="black" size=40>
     Your Posts
 </font>
 </div>
-
 <div class="box">
     <div class="entry" style="background: #eef6f6">
     <div>
     <img src="/html/Stitch.png" width="64" height="64">
     "Anyone have any music recommendations?"
-    ${date|h}
-    ${view|h}
+    4 hours ago
+    Views: 8
     </div>
     </div>
     
@@ -96,8 +82,8 @@ img{
     <div>
     <img src="/html/Stitch.png" width="64" height="64">
     "Can't wait for the live action 'Lilo and Stitch'!!!"
-    ${date|h}
-    ${view|h}
+    1 day ago
+    Views: 25
     </div>
     </div>
     
@@ -105,8 +91,8 @@ img{
     <div>
     <img src="/html/Stitch.png" width="64" height="64">
     "Just took a BuzzFeed quiz, I got Stitch!! :D"
-    ${date|h}
-    ${view|h}
+    2 days ago
+    Views: 32
     </div>
     </div>
     
@@ -114,8 +100,8 @@ img{
     <div>
     <img src="/html/Stitch.png" width="64" height="64">
     "What is the best place to visit in Hawaii?"
-    ${date|h}
-    ${view|h}
+    4 days ago
+    Views: 29
     </div>
     </div>
     
@@ -123,8 +109,8 @@ img{
     <div>
     <img src="/html/Stitch.png" width="64" height="64">
     "Any Lilo and Stitch fans here??"
-    ${date|h}
-    ${view|h}
+    9 days ago
+    Views: 43
     </div>
     </div>
     
@@ -132,8 +118,8 @@ img{
     <div>
     <img src="/html/Stitch.png" width="64" height="64">
     "Any one have any ideas for hobbies? Trying to find something new to do."
-    ${date|h}
-    ${view|h}
+    10 days ago
+    Views: 62
     </div>
     </div>
     
@@ -141,8 +127,8 @@ img{
     <div>
     <img src="/html/Stitch.png" width="64" height="64">
     "I can't wait for spring, I'm ready to say goodbye to this snow!"
-    ${date|h}
-    ${view|h}
+    12 days ago
+    Views: 71
     </div>
     </div>
     
@@ -150,8 +136,8 @@ img{
     <div>
     <img src="/html/Stitch.png" width="64" height="64">
     "I thought about learning how to surf, not sure how I can do that at the moment... #landlockedlife"
-    ${date|h}
-    ${view|h}
+    12 days ago
+    Views: 56
     </div>
     </div>
     
@@ -159,8 +145,8 @@ img{
     <div>
     <img src="/html/Stitch.png" width="64" height="64">
     "Hello!"
-    ${date|h}
-    ${view|h}
+    15 days ago
+    Views: 15
     </div>
     </div>
     
@@ -168,11 +154,12 @@ img{
     <div>
     <img src="/html/Stitch.png" width="64" height="64">
     "Welcome StitchFan73"
-    ${date|h}
-    ${view|h}
+    15 days ago
+    Views: 15
     </div>
     </div>
 </div>
      
 </body>
+
 </html>

@@ -8,14 +8,12 @@ def get(): return """
 <style>
 
 div.dialog {
-    
     border: 2px double black;
     background: white;
     padding-top: 0em;
     padding-left: 1em;
     padding-right: 1em;
     padding-bottom: 1em;
-
     /* center the div vertically and horizontally
        ref: https://stackoverflow.com/a/13356401 */
     position: absolute;
@@ -24,16 +22,12 @@ div.dialog {
     left: 0;
     right: 0;
     margin: auto;
-
     /* set size of dialog */
     width: 40vw;
     height: 40vh;
-
     overflow: auto;
-
     /* offset x, offset y, blur radius, color*/
     box-shadow: 1em 1em 0.5em rgba(0,0,0,0.5);
-
     z-index: 10;
 }
 
