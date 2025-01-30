@@ -4,10 +4,11 @@ import mako.lookup
 import os.path
 import random
 import names
+import dates
+import views
 
 #we have modules for each page we're displaying 
 import page_signup
-import page_posts
 import page_test
 
 PYPATH = os.path.dirname(__file__)
@@ -26,7 +27,10 @@ class App:
         return page_signup.get()
     @cherrypy.expose
     def posts(self):
-        return page_posts.get()
+        d = random.choice(dates.dates)
+        v = random.choice(views.views)
+        o = lookup.get_template("page_posts.html")
+        return o.render(date=d, view=v)
     @cherrypy.expose
     def test(self):
         return page_test.get()
