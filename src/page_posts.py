@@ -1,4 +1,4 @@
 import dates
 
-for date in dates:
-    print (date)
+for i in range(10):
+    print(dates)
