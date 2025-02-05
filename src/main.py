@@ -19,7 +19,8 @@ def get_random_time():
     x = datetime.timedelta(minutes=random.randrange(8000))
     hoursago = int( x.seconds / 3600 )
     minutesago = round( (x.seconds - hoursago*3600)/60 )
-    print( f"{x.days} days, {hoursago} hours, and {minutesago} minutes ago" )
+    for i in range(10):
+        return ( f"{x.days} days, {hoursago} hours, and {minutesago} minutes ago" )
 
 class App:
     @cherrypy.expose
