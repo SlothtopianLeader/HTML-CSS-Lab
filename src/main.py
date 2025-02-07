@@ -17,10 +17,9 @@ lookup = mako.lookup.TemplateLookup(
 
 def get_random_time():
     x = datetime.timedelta(minutes=random.randrange(8000))
-    hoursago = int( x.seconds / 3600 )
-    minutesago = round( (x.seconds - hoursago*3600)/60 )
-    for i in range(10):
-        return ( f"{x.days} days, {hoursago} hours, and {minutesago} minutes ago" )
+    hoursago = x.seconds // 3600
+    minutesago = (x.seconds-hoursago * 3600) // 60
+    return f"{x.days} days, {hoursago} hours, and {minutesago} minutes ago"
 
 class App:
     @cherrypy.expose
@@ -33,9 +32,9 @@ class App:
         return page_signup.get()
     @cherrypy.expose
     def posts(self):
-        date = get_random_time()
+        timestamps = [get_random_time() for _ in range(1)]
         o = lookup.get_template("page_posts.html")
-        return o.render(date=date)
+        return o.render(timestamps=timestamps)
     @cherrypy.expose
     def test(self):
         return page_test.get()
