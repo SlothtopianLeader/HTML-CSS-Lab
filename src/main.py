@@ -32,7 +32,7 @@ class App:
         return page_signup.get()
     @cherrypy.expose
     def posts(self):
-        timestamps = [get_random_time() for _ in range(1)]
+        timestamps = [get_random_time() for _ in range(10)]
         o = lookup.get_template("page_posts.html")
         return o.render(timestamps=timestamps)
     @cherrypy.expose

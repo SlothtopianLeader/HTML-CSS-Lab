@@ -88,12 +88,11 @@ img{
 </div>
 
 <div class="box">
-    % for timestamp in timestamps:
-    <div class="entry" style="background: #ddeeee; display: flex; align-items: center; padding: 1em; margin-bottom: 1em;">
+    <div class="entry" style="background: #ddeeee; display: flex; align-items: center; padding: 1em;">
         <img src="/html/Stitch.png" width="64" height="64">
         <div class="description" style="margin-left: 1em; text-align: left;">
             <b>"Anyone have any music recommendations?"</b>  
-            <br> Posted on: ${timestamp}
+            <br> Posted on: ${timestamps[0]}
         </div>
     </div>
 
@@ -101,7 +100,7 @@ img{
     <img src="/html/Stitch.png" width="64" height="64">
     <div class="description" style="margin-left: 1em; text-align: left;">
         <b>"Can't wait for the live action 'Lilo and Stitch'!!!"</b>
-        <br> Posted on: ${timestamp}
+        <br> Posted on: ${timestamps[1]}
     </div>
     </div>
 
@@ -109,7 +108,7 @@ img{
     <img src="/html/Stitch.png" width="64" height="64">
     <div class = "description" style="margin-left: 1em; text-align: left;">
         <b>"Just took a BuzzFeed quiz, I got Stitch!! :D"</b>
-        <br> Posted on: ${timestamp}
+        <br> Posted on: ${timestamps[2]}
     </div>
     </div>
 
@@ -117,7 +116,7 @@ img{
     <img src="/html/Stitch.png" width="64" height="64">
     <div class = "description" style="margin-left: 1em; text-align: left;">
         <b>"What is the best place to visit in Hawaii?"</b>
-        <br> Posted on: ${timestamp}
+        <br> Posted on: ${timestamps[3]}
     </div>
     </div>
 
@@ -125,7 +124,7 @@ img{
     <img src="/html/Stitch.png" width="64" height="64">
     <div class = "description" style="margin-left: 1em; text-align: left;">
         <b>"Any Lilo and Stitch fans here??"</b>
-        <br> Posted on: ${timestamp}
+        <br> Posted on: ${timestamps[4]}
     </div>
     </div>
 
@@ -133,7 +132,7 @@ img{
     <img src="/html/Stitch.png" width="64" height="64">
     <div class = "description" style="margin-left: 1em; text-align: left;">
         <b>"Any one have any ideas for hobbies? Trying to find something new to do."</b>
-        <br> Posted on: ${timestamp}
+        <br> Posted on: ${timestamps[5]}
     </div>
     </div>
 
@@ -141,7 +140,7 @@ img{
     <img src="/html/Stitch.png" width="64" height="64">
     <div class = "description" style="margin-left: 1em; text-align: left;">
         <b>"I can't wait for spring, I'm ready to say goodbye to this snow!"</b>
-        <br> Posted on: ${timestamp}
+        <br> Posted on: ${timestamps[6]}
     </div>
     </div>
 
@@ -149,7 +148,7 @@ img{
     <img src="/html/Stitch.png" width="64" height="64">
     <div class = "description" style="margin-left: 1em; text-align: left;">
         <b>"I thought about learning how to surf, not sure how I can do that at the moment... #landlockedlife"</b>
-        <br> Posted on: ${timestamp}
+        <br> Posted on: ${timestamps[7]}
     </div>
     </div>
 
@@ -157,7 +156,7 @@ img{
     <img src="/html/Stitch.png" width="64" height="64">
     <div class = "description" style="margin-left: 1em; text-align: left;">
         <b>"Thoughts on a Lilo and Stitch Watchathon?"</b>
-        <br> Posted on: ${timestamp}
+        <br> Posted on: ${timestamps[8]}
     </div>
     </div>
 
@@ -165,10 +164,9 @@ img{
     <img src="/html/Stitch.png" width="64" height="64">
     <div class = "description" style="margin-left: 1em; text-align: left;">
         <b>"Hello!"</b>
-        <br> Posted on: ${timestamp}
+        <br> Posted on: ${timestamps[9]}
     </div>
     </div>
-    % endfor
 </div>
      
 </body>
