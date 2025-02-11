@@ -1,5 +1,3 @@
-def get(): return """
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -60,17 +58,27 @@ div.button {
     <div class="title">Sign up</div>
     <hr>
     <div>Email</div>
-    <input size=10>
+    <input id="email" size=10>
+    <div class="error" id="email-error"></div>
+
     <div>Real Name</div>
-    <input size=10>
+    <input id="name" size=10>
+    <div class="error" id="name_error"></div>
+
     <div>Password</div>
-    <input type=”password” size=10>
+    <input id="password" type=”password” size=10>
+    <div class="error" id="passwprd-error"></div>
+
     <div>Date of Birth</div>
-    <input type=”date”>
+    <input id="dob" type=”date”>
+    <div class="error" id="dob-error"></div>
+
     <hr>
-    <button onclick="foo()">Sign Up</button>
-    
+    <button id="signup-btn">Sign Up</button>
 </div>
-     
+
+<script>
+    
+</script>
 </body>
-</html>"""
+</html>
