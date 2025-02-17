@@ -1,9 +1,15 @@
-document.getElementById("signup-btn").addEventListener("click", function()
+function SignUp()
     {
-        let email = document.getElementById("email").value.trim();
-        let name = document.getElementById("name").value.trinm();
-        let password = document.getElementById("password").value.trim();
-        let dob = document.getElementById("dob").value.trim();
+        "use strict";
+
+        let email = document.getElementById("email");
+        let emailX = email.value.trim();
+        let name = document.getElementById("name");
+        let nameX = name.value.trim();
+        let password = document.getElementById("password");
+        let passwordX = name.value;
+        let dob = document.getElementById("dob");
+        let dobX = dob.value;
 
         let emailError = document.getElementById("email-error");
         let nameError = document.getElementById("name-error");
@@ -17,51 +23,49 @@ document.getElementById("signup-btn").addEventListener("click", function()
 
         let hasError = false;
 
-        if (!email)
+        if (!emailX)
         {
             emailError.textContent = "Email is required.";
             hasError = true;
         }
-
-        if (!name)
-        {
-            nameError.textContent = "Name is required.";
-            hasError = true;
-        }
-
-        if (!password)
-        {
-            passwordError.textContent = "Password is required.";
-            hasError = True;
-        }
-
-        if (!dob)
-        {
-            dobError.textContent = "Date of Birth is required.";
-            hasError = True;
-        }
-
-        if (email && (!email.includes("@") || email.startsWith("@") || email.endsWith("@")))
+        else if (!emailX.includes("@") || emailX.startsWith("@") || emailX.endsWith("@"))
         {
             emailError.textContent = "Invalid email address.";
             hasError = true;
         }
 
-        if (dobInput.valueAsNumber)
+        if (!nameX)
         {
-            let birthDate = dobInput.valueAsNumber;
+            nameError.textContent = "Name is required.";
+            hasError = true;
+        }
+
+        if (!passwordX)
+        {
+            passwordError.textContent = "Password is required.";
+            hasError = true;
+        }
+
+        if (!dobX)
+        {
+            dobError.textContent = "Birth Date is required.";
+            hasError = true;
+        }
+        else
+        {
+            let birthDate = new Date(dobX).getTime();
             let currentTime = Date.now();
             let ageMilliseconds = currentTime - birthDate;
             let ageYears = ageMilliseconds / (1000 * 60 * 60 * 24 * 365.25);
 
             if (ageYears < 13)
             {
-                dobError.textContent = "You must be atleast 13 years old to sign up.";
+                dobError.textContent = "You have to be at least 13 years old to sign up.";
                 hasError = true;
             }
         }
-        if(!hasError)
-        {
+
+        if (!hasError)
             alert("Sign up was successful!");
-        }
-    });
+
+    };

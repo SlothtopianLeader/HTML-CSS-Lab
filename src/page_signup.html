@@ -51,6 +51,12 @@ div.button {
     text-align: center;
 }
 
+.error{
+   color: red;
+   font-size: 0.9em; 
+}
+
+
 </style>
 <body>
 
@@ -67,18 +73,19 @@ div.button {
 
     <div>Password</div>
     <input id="password" type=”password” size=10>
-    <div class="error" id="passwprd-error"></div>
+    <div class="error" id="password-error"></div>
 
     <div>Date of Birth</div>
     <input id="dob" type=”date”>
     <div class="error" id="dob-error"></div>
 
     <hr>
-    <button id="signup-btn">Sign Up</button>
+    <button onclick="SignUp()">Sign Up</button>
+
+    
 </div>
 
-<script>
-    
-</script>
+<script src="/src/signup.js"></script>
+
 </body>
 </html>
