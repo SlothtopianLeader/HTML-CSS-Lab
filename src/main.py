@@ -5,6 +5,7 @@ import os.path
 import random
 import names
 import datetime
+import views
 
 #we have modules for each page we're displaying 
 import page_signup
@@ -33,9 +34,10 @@ class App:
         return t.render()
     @cherrypy.expose
     def posts(self):
+        v = random.choice(views.views)
         timestamps = [get_random_time() for _ in range(10)]
         o = lookup.get_template("page_posts.html")
-        return o.render(timestamps=timestamps)
+        return o.render(timestamps=timestamps, view=v)
     @cherrypy.expose
     def test(self):
         return page_test.get()

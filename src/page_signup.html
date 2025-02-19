@@ -2,18 +2,13 @@
 <html>
 <head>
 <title>Sign Up</title>
-<script> 
-    function AlertMe() {
-        alert("Alert button clicked!");
-    }
-</script>
 </head>
 <style>
-
+h1 {text-align: center; padding-top: 3.5em;}
 div.dialog {
     
     border: 2px double black;
-    background: white;
+    background: #e8edf8;
     padding-top: 0em;
     padding-left: 1em;
     padding-right: 1em;
@@ -62,33 +57,32 @@ div.button {
 }
 
 </style>
-
-<body>
+<h1>Sign Up</h1>
+<body style="background-color:#a6b7df;">
 <div class="dialog">
-    <div class="title">Sign up</div>
-    <hr>
+    <br>
+    <br>
     <div>Email</div>
     <input id="email" size=10>
-    <div class="error" id="email-error"></div>
 
     <div>Real Name</div>
     <input id="name" size=10>
-    <div class="error" id="name_error"></div>
 
     <div>Password</div>
     <input id="password" type="password" size=10>
-    <div class="error" id="password-error"></div>
 
     <div>Date of Birth</div>
     <input id="dob" type="date">
-    <div class="error" id="dob-error"></div>
 
+    <br>
+    <br>
     <hr>
-    <input type="button" value="Alert" onclick="AlertMe()" />
+    <br>
+    <br>
     <button onclick="SignUp()">Sign Up</button>
 
 </div>
 
-<script src="/static/src/signup.js"></script>
+<script src="/html/signup.js"></script>
 </body>
 </html>

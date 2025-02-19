@@ -74,6 +74,3 @@ div.button {
      
 </body>
 </html>"""
-
-#<input id="dob" type=”date”>
-#<input type="datetime-local" id="Test_DatetimeLocal">

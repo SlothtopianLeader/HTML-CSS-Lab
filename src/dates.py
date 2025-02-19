@@ -1,5 +1,3 @@
-#dates = ["2 days ago", "3 days ago", "5 hours ago", "2 hours ago", "12 days ago", "8 hours ago", "55 minutes ago"] 
-
 import datetime
 import random
 

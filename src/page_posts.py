@@ -1,8 +1,3 @@
-#import dates
-
-#for i in range(10):
-#    print(dates)
-
 import datetime
 import random
 
