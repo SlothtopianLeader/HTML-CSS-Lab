@@ -66,8 +66,10 @@ div.button {
     <div>Password</div>
     <input type=”password” size=10>
     <div>Date of Birth</div>
-    <input type=”date”>
-    <div class="button">Sign Up</button>
+    <input type="datetime-local" id="Test_DatetimeLocal">
+    <hr>
+    <button onclick="SignUp()">Sign Up</button>
+    
 </div>
      
 </body>

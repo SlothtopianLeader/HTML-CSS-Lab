@@ -4,7 +4,7 @@ import mako.lookup
 import os.path
 import random
 import names
-import dates
+import datetime
 import views
 
 #we have modules for each page we're displaying 
@@ -16,6 +16,12 @@ lookup = mako.lookup.TemplateLookup(
     directories=[os.path.dirname(__file__)]
 )
 
+def get_random_time():
+    x = datetime.timedelta(minutes=random.randrange(8000))
+    hoursago = x.seconds // 3600
+    minutesago = (x.seconds-hoursago * 3600) // 60
+    return f"{x.days} days, {hoursago} hours, and {minutesago} minutes ago"
+
 class App:
     @cherrypy.expose
     def index(self):
@@ -24,13 +30,14 @@ class App:
         return t.render(name=n)
     @cherrypy.expose
     def signup(self):
-        return page_signup.get()
+        t = lookup.get_template("page_signup.html")
+        return t.render()
     @cherrypy.expose
     def posts(self):
-        d = random.choice(dates.dates)
         v = random.choice(views.views)
+        timestamps = [get_random_time() for _ in range(10)]
         o = lookup.get_template("page_posts.html")
-        return o.render(date=d, view=v)
+        return o.render(timestamps=timestamps, view=v)
     @cherrypy.expose
     def test(self):
         return page_test.get()
