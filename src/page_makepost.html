@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Make Post</title>
+</head>
+<style>
+
+h1 {text-align: center; padding-top: 3.5em;}
+
+input[type=text], select{
+    width: 200px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    background-color: #FFF7F3;
+    display: inline-block;
+    border: 2px solid #C599B6;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 200px;
+    background-color: #e3a7b0;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: 2px solid;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover{
+    background-color: #d99fa8;
+}
+.about {
+    border: 2px solid rgb(0, 0, 0);
+    background: rgb(232, 230, 255);
+}
+
+.myDiv {
+    text-align: center;
+}
+
+.postButton {
+    text-align: center;
+    margin: 20px;
+    margin-top: 100px;
+}
+
+.title {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1em;
+    color: black;
+    padding: 0.5em;
+}
+img{
+    border: 1px double black;
+    margin-top: 0.6em;
+}
+.description{
+    text-align: center;
+    color: black;
+    margin-left: 60px;
+
+}
+
+</style>
+
+
+<body style="background-color:#FAD0C4;">
+
+<div class='titlebar' align="center">
+    <h1>Make Posts</h1>
+</div>
+
+<div class="myDiv">
+    <input id="profilepic" type="file">
+    <input type="text" id="title" placeholder="Enter title">
+    <br>
+    <br>
+    <input id="profilepic" type="file" style="display:none" onchange="updatethumb()">
+    <img id="thumbnail" width="64" height="64">
+</div>
+
+<div class="postButton">
+    <input type="submit" onclick="post()" value="Post my Post!">
+</div>
+
+
+<script>
+    function post(){
+        let titleInput = document.getElementById("title").value;
+        let picfiles = document.getElementById("profilepic").files;
+
+        // Bundle the data together
+        let fData = new FormData();
+        fData.append("title", title);
+        fData.append("pic", picfiles[0]);
+    
+        // Uploading form data
+        fetch( "/do_update", {
+            method: "POST",
+            body: fData
+        }).then( (resp) => {
+            resp.json().then( (J) => {
+                console.log("Server said:",J);
+
+                if (J.ok === true) {
+                    success();
+                }
+            }).catch( (err) => {
+                console.log("JSON error:",err);
+                error_alert();
+            })
+        }).catch( (err) => {
+            console.log("Error:",err);
+            error_alert();
+        });
+
+    }
+
+
+    function checkEnter(ev){
+        if (ev.key === "Enter")
+            post();
+    }
+
+    function updatethumb(){
+        let picfiles = document.getElementById("profilepic").files;
+        if(picfiles.length > 0 ){
+            let u = URL.createObjectURL(picfiles[0]);
+            let th = document.getElementById("thumbnail");
+            th.onload = () => {
+                URL.revokeObjectURL(u);
+            };
+            th.src = u;
+        }
+    }
+
+    function error_alert(){
+        alert("Error!");
+    }
+    function success(){
+        window.location.assign("http://localhost:8080/")
+    }
+
+</script>
+</body>
+</html>
