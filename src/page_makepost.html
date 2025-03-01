@@ -65,6 +65,21 @@ img{
 
 }
 
+.fieldname {
+    display: inline-block;
+    width: 10em;
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+}
+
+.filepicker {
+    border: 4px outset #eeeeee;
+    background: #dddddd;
+    margin-top: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
 </style>
 
 
@@ -75,17 +90,19 @@ img{
 </div>
 
 <div class="myDiv">
-    <input id="profilepic" type="file">
-    <input type="text" id="title" placeholder="Enter title">
-    <br>
-    <br>
-    <input id="profilepic" type="file" style="display:none" onchange="updatethumb()">
+    <span class="fieldname">Title:</span>
+    <input id="title" size="20">
+</div>
+<div class="myDiv">
+    <span class="fieldname">Profile Picture:</span>
+    <input id="profilepic" type="file" style="display:none"
+        onchange="updatethumb()">
+    <label for="profilepic" class="filepicker">Click to Pick</label>
     <img id="thumbnail" width="64" height="64">
 </div>
-
-<div class="postButton">
-    <input type="submit" onclick="post()" value="Post my Post!">
-</div>
+<br>
+<br>
+<div class="myDiv"><button onclick="post()">Post</button></div>
 
 
 <script>

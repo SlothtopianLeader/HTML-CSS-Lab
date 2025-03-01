@@ -6,7 +6,7 @@ import random
 import names
 import datetime
 import views
-from PIL import Image
+import PIL.Image
 import io
 
 #we have modules for each page we're displaying 
